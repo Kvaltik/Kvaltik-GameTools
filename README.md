@@ -23,7 +23,27 @@ npm install
 npm start
 ```
 
-## Struktura
+## Windows EXE
+
+[Stáhnout instalátor pro Windows x64](https://github.com/Kvaltik/Kvaltik-GameTools/releases/download/v0.1.0/Kvaltik-GameTools-0.1.0-Setup-x64.exe)
+
+Instalátor pro Windows x64 spustíš dvojklikem na
+`Kvaltik-GameTools-0.1.0-Setup-x64.exe`. V průvodci vybereš cílovou složku,
+například `D:\Aplikace\Kvaltik GameTools`. Instalátor vytvoří zástupce na ploše
+i v nabídce Start. Aplikaci lze odinstalovat přes nastavení Windows.
+Na cílovém počítači není potřeba Node.js.
+
+Pro opakované sestavení ze zdrojů:
+
+```bash
+npm ci
+npm run build:win
+```
+
+Výsledný soubor je ve složce `dist/`. Balíček není digitálně podepsaný.
+Přenosnou verzi bez instalace lze sestavit příkazem `npm run build:portable`.
+
+## Struktura souborů
 
 - `main.js` – Electron hlavní proces
 - `preload.js` – bezpečné IPC API

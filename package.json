@@ -7,9 +7,45 @@
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "dev": "electron ."
+    "dev": "electron .",
+    "build:win": "electron-builder --win nsis --x64 --publish never",
+    "build:portable": "electron-builder --win portable --x64 --publish never"
   },
   "devDependencies": {
-    "electron": "^39.0.0"
+    "electron": "^39.0.0",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "cz.kvaltik.gametools",
+    "productName": "Kvaltik GameTools",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "plugins/manifest.json",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "signExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false,
+      "allowElevation": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "Kvaltik GameTools",
+      "installerLanguages": ["cs_CZ"],
+      "language": "1029",
+      "artifactName": "Kvaltik-GameTools-${version}-Setup-${arch}.${ext}"
+    },
+    "portable": {
+      "artifactName": "Kvaltik-GameTools-${version}-portable-${arch}.${ext}"
+    }
   }
 }
