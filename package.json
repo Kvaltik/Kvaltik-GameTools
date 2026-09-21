@@ -1,0 +1,15 @@
+{
+  "name": "kvaltik-gametools",
+  "version": "0.1.0",
+  "description": "Kvaltík GameTools - companion hub pro simulátory",
+  "main": "main.js",
+  "author": "Kvaltík",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^39.0.0"
+  }
+}

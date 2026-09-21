@@ -1,0 +1,67 @@
+{
+  "plugins": [
+    {
+      "id": "tsc",
+      "name": "Train Simulator Classic",
+      "icon": "🚂",
+      "status": "planned",
+      "modules": [
+        "Driver Assistant",
+        "Sešitový jízdní řád",
+        "Brzdicí procenta",
+        "Route Manager",
+        "Scenario Manager"
+      ]
+    },
+    {
+      "id": "ets2",
+      "name": "Euro Truck Simulator 2",
+      "icon": "🚛",
+      "status": "planned",
+      "modules": [
+        "Telemetry Dashboard",
+        "Kniha jízd",
+        "Virtuální firma",
+        "GPS Companion",
+        "Servis"
+      ]
+    },
+    {
+      "id": "fs22",
+      "name": "Farming Simulator 22",
+      "icon": "🚜",
+      "status": "planned",
+      "modules": [
+        "Universal Display",
+        "Field Manager",
+        "Harvest Monitor",
+        "Machine Manager",
+        "Silo Monitor"
+      ]
+    },
+    {
+      "id": "omsi2",
+      "name": "OMSI 2",
+      "icon": "🚌",
+      "status": "planned",
+      "modules": [
+        "IBIS Companion",
+        "Route Assistant",
+        "HOF Manager",
+        "Passenger Monitor"
+      ]
+    },
+    {
+      "id": "minecraft",
+      "name": "Minecraft",
+      "icon": "⛏️",
+      "status": "planned",
+      "modules": [
+        "Server Manager",
+        "Dashboard",
+        "Backup Manager",
+        "Mod Manager"
+      ]
+    }
+  ]
+}

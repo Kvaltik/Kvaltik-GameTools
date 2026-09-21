@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kvaltík GameTools</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">K</div>
+        <div>
+          <strong>Kvaltík</strong>
+          <span>GameTools</span>
+        </div>
+      </div>
+
+      <nav id="mainNav">
+        <button class="nav-item active" data-page="home"><span>🏠</span> Domů</button>
+
+        <div class="nav-label">HRY</div>
+        <button class="nav-item" data-page="tsc"><span>🚂</span> Train Simulator</button>
+        <button class="nav-item" data-page="ets2"><span>🚛</span> ETS2</button>
+        <button class="nav-item" data-page="fs22"><span>🚜</span> Farming Simulator</button>
+        <button class="nav-item" data-page="omsi2"><span>🚌</span> OMSI 2</button>
+        <button class="nav-item" data-page="minecraft"><span>⛏️</span> Minecraft</button>
+
+        <div class="nav-label">SYSTÉM</div>
+        <button class="nav-item" data-page="supporter"><span>💜</span> Supporter</button>
+        <button class="nav-item" data-page="updates"><span>📦</span> Aktualizace</button>
+        <button class="nav-item" data-page="settings"><span>⚙️</span> Nastavení</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="status-dot"></div>
+        <span>GameTools Core online</span>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <h1 id="pageTitle">Kvaltík GameTools</h1>
+          <p id="pageSubtitle">Všechny tvoje herní nástroje na jednom místě.</p>
+        </div>
+        <div class="topbar-actions">
+          <div class="connection-pill"><span class="status-dot"></span> Core připojen</div>
+          <button class="profile-button">K</button>
+        </div>
+      </header>
+
+      <section id="page-home" class="page active">
+        <div class="hero">
+          <div>
+            <span class="eyebrow">KVALTÍK ECOSYSTEM</span>
+            <h2>Jedna aplikace.<br />Všechny simulátory.</h2>
+            <p>
+              Spouštěj nástroje pro TSC, ETS2, Farming Simulator, OMSI 2 a Minecraft.
+              Později přidáme telemetrii, mobilní Companion a Supporter výhody.
+            </p>
+            <div class="hero-actions">
+              <button class="primary" data-jump="ets2">Otevřít moduly</button>
+              <button class="secondary" data-jump="supporter">Supporter centrum</button>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="metric">
+              <span>Aktivní hra</span>
+              <strong>Žádná</strong>
+            </div>
+            <div class="metric">
+              <span>Telemetry server</span>
+              <strong class="ok">Připraven</strong>
+            </div>
+            <div class="metric">
+              <span>Pluginy</span>
+              <strong id="pluginCount">0</strong>
+            </div>
+            <div class="metric">
+              <span>Verze</span>
+              <strong id="appVersion">0.1.0</strong>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="section-title">Herní moduly</h3>
+        <div id="gameCards" class="card-grid"></div>
+
+        <h3 class="section-title">Co budeme přidávat</h3>
+        <div class="roadmap-grid">
+          <div class="roadmap-card"><span>📡</span><div><strong>Telemetry Core</strong><small>Společná vrstva pro data z her.</small></div></div>
+          <div class="roadmap-card"><span>📱</span><div><strong>Mobile Companion</strong><small>Telefon nebo tablet jako druhý displej.</small></div></div>
+          <div class="roadmap-card"><span>💜</span><div><strong>Supporter Connect</strong><small>Patreon členství, beta funkce a témata.</small></div></div>
+          <div class="roadmap-card"><span>☁️</span><div><strong>Cloud Sync</strong><small>Nastavení a profily napříč zařízeními.</small></div></div>
+        </div>
+      </section>
+
+      <section id="page-game" class="page">
+        <div class="game-header">
+          <div class="game-icon" id="gameIcon">🎮</div>
+          <div>
+            <span class="eyebrow">GAME PLUGIN</span>
+            <h2 id="gameName">Hra</h2>
+            <p id="gameStatus">Modul je připraven k vývoji.</p>
+          </div>
+        </div>
+        <div id="moduleGrid" class="module-grid"></div>
+      </section>
+
+      <section id="page-supporter" class="page">
+        <div class="supporter-hero">
+          <span class="eyebrow">SUPPORTER CENTER</span>
+          <h2>💜 Kvaltík Supporter</h2>
+          <p>Bonusové funkce, beta verze, témata a hlasování budou propojené s účtem.</p>
+        </div>
+
+        <div class="supporter-layout">
+          <div class="panel">
+            <h3>Stav účtu</h3>
+            <div class="account-row"><span>Patreon</span><strong class="muted">Nepřipojeno</strong></div>
+            <div class="account-row"><span>Tier</span><strong>FREE</strong></div>
+            <div class="account-row"><span>Beta kanál</span><strong class="muted">Vypnuto</strong></div>
+            <button class="primary full">Připojení přidáme v další verzi</button>
+          </div>
+          <div class="panel">
+            <h3>Plánované výhody</h3>
+            <div class="benefit">🧪 Přednostní beta verze</div>
+            <div class="benefit">🎨 Exkluzivní témata</div>
+            <div class="benefit">📊 Rozšířené dashboardy</div>
+            <div class="benefit">📱 Mobile Companion+</div>
+            <div class="benefit">🗳️ Hlasování o funkcích</div>
+            <div class="benefit">🏆 Supporter odznak</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="page-updates" class="page">
+        <div class="panel wide">
+          <span class="eyebrow">UPDATE CENTER</span>
+          <h2>📦 Aktualizace</h2>
+          <p>Aktuálně běží vývojová verze. Později sem napojíme Stable/Beta kanál a automatické aktualizace.</p>
+          <div class="update-box">
+            <div><strong>GameTools 0.1.0</strong><small>První základ celé platformy.</small></div>
+            <span class="badge">AKTUÁLNÍ</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="page-settings" class="page">
+        <div class="settings-grid">
+          <div class="panel">
+            <h3>Obecné</h3>
+            <label class="toggle-row">
+              <span>Spouštět GameTools po startu systému</span>
+              <input type="checkbox" />
+            </label>
+            <label class="toggle-row">
+              <span>Automaticky hledat spuštěné hry</span>
+              <input type="checkbox" checked />
+            </label>
+            <label class="toggle-row">
+              <span>Povolit lokální Telemetry server</span>
+              <input type="checkbox" checked />
+            </label>
+          </div>
+          <div class="panel">
+            <h3>Vývoj</h3>
+            <p class="muted-text">Pluginový systém je načítán ze souboru <code>plugins/manifest.json</code>.</p>
+            <p class="muted-text">Další krok: skutečné napojení první hry na živá data.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./renderer.js"></script>
+</body>
+</html>
